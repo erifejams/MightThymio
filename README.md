@@ -1,10 +1,18 @@
 # MightThymio
+Using :<br>
 • Python <br>
-• using CoppeliaSim and the simulated MyT <br>
+• CoppeliaSim and the simulated MyT <br>
 • ROS2 <br>
 • Linux <br>
 
-NB: No videos as there are errors in the implementations, such as the ones specified in "Comments on Task.pdf".
+NB: No videos as there are errors in the implementations, such as the ones specified in "Comments on Task.pdf". <br>
+
+# Tasks
+1. Write an open-loop controller that moves the MyT in such a way that it follows an "8" trajectory. Test it in the default empty scene. 
+
+2. Using the wall scene file, write a controller to move the MyT straight ahead. Note that this scene rotates randomly the wall every time it is reset. We assume the robot is heading toward a wall somewhere in front of it; the wall is not necessarily orthogonal to the direction the MyT is originally pointing to. Write the controller in such a way that the MyT moves straight ahead until it is close to the wall (without hitting it), then turns in place in such a way to face the wall as precisely as possible (i.e., the robot's x-axis should be orthogonal to the wall). To sense the wall orientation once you are close to it, you should use proximity sensors. Feel free to define a convenient distance threshold at which you decide to stop. 
+
+3. Using the controller built-in task 2, once the MyT arrives close to the wall, it should then turn in such a way that it is facing opposite to the wall, then move and stop in such a way that the robot is as close as possible to a point that is 2 meters away from the wall. Note that the proximity sensors don't have such a long-range, so at some point, you'll have to rely on odometry. <br>
 
 # To run 
 ## Terminal #1:
