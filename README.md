@@ -1,5 +1,5 @@
 # MightThymio
-Using :<br>
+# Using 
 • Python <br>
 • CoppeliaSim and the simulated MyT <br>
 • ROS2 <br>
