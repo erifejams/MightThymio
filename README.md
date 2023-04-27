@@ -11,7 +11,10 @@ using CoppeliaSim and the simulated MyT
 ## Terminal #2:
 ### to get the coppelia sim running
 cd ~/apps/CoppeliaSim_Edu_V4_4_0_rev0_Ubuntu20_04<br>
-bash coppeliaSim.sh
+bash coppeliaSim.sh <br>
+load the scene that can be found in Scene/final.ttm <br>
+press the start button to start the simulation <br>
+
 
 ## Terminal #3:
 ros2 launch thymioid main.launch device:="tcp:host=localhost;port=33333" simulation:=True name:=thymio0
