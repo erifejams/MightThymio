@@ -1,6 +1,7 @@
 # MightThymio
 using CoppeliaSim and the simulated MyT
 
+NB: No videos as there are errors in the implementations, such as the one specified in "Comments on Task.pdf".
 
 # To run 
 ## Terminal #1:
