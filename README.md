@@ -1,7 +1,10 @@
 # MightThymio
-using CoppeliaSim and the simulated MyT
+• Python
+• using CoppeliaSim and the simulated MyT <br>
+• ROS2 <br>
+• Linux <br>
 
-NB: No videos as there are errors in the implementations, such as the one specified in "Comments on Task.pdf".
+NB: No videos as there are errors in the implementations, such as the ones specified in "Comments on Task.pdf".
 
 # To run 
 ## Terminal #1:
