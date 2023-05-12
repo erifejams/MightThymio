@@ -87,7 +87,7 @@ class ControllerNode(Node):
         
 
         #self.get_logger().warning("checking which circle I should draw")
-        self.vel_publisher.publish(cmd_vel)
+        #self.vel_publisher.publish(cmd_vel)
         
         ##FIRST CIRCLE
         if self.current_state == RobotState.oneCircle:
