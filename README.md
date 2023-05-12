@@ -5,7 +5,6 @@
 • ROS2 <br>
 • Linux <br>
 
-NB: No videos as there are errors in the implementations, such as the ones specified in "Comments on Task.pdf". <br>
 
 # Tasks
 1. Write an open-loop controller that moves the MyT in such a way that it follows an "8" trajectory. Test it in the default empty scene. 
@@ -17,7 +16,8 @@ NB: No videos as there are errors in the implementations, such as the ones speci
 # To run 
 ## Terminal #1:
 ### (EVERYTIME CHANGES ARE MADE TO THE PACKAGE CD TO THE ~/dev_ws/ folder): <br>
-•	Colcon build <br>
+•	cd ~/dev_ws <br>
+• colcon build <br>
 •	source ~/dev_ws/install/setup.bash <br>
 
 ## Terminal #2:
@@ -29,12 +29,14 @@ press the start button to start the simulation <br>
 
 
 ## Terminal #3:
+source ~/dev_ws/install/setup.bash <br>
 ros2 launch thymioid main.launch device:="tcp:host=localhost;port=33333" simulation:=True name:=thymio0
 
 
 ## Terminal #4:
 ### To run the compulsary.launch.xml (for task 3):
 if you want to run the other task, copy the line below, but just change the name of the launch file as seen in the launch file folder e.g compulsary.launch.xml -> controller2.launch.xml  <br>  <br>
+• source ~/dev_ws/install/setup.bash <br>
 • ros2 launch thymio_example compulsary.launch.xml thymio_name:=thymio0 <br>
 
 
