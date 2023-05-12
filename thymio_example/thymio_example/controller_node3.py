@@ -19,6 +19,7 @@ class ControllerNode(Node):
         # Create attributes to store odometry pose and velocity
         self.odom_pose = None
         self.odom_velocity = None
+        self.rightProximity = None
                 
         # Create a publisher for the topic 'cmd_vel'
         self.vel_publisher = self.create_publisher(Twist, '/thymio0/cmd_vel', 10)
@@ -91,15 +92,19 @@ class ControllerNode(Node):
         
     def update_callback(self):
         # robot is moving straight ahead
+        if self.rightProximity is None:
+            return
+         
         cmd_vel = Twist() 
         cmd_vel.linear.x  = 2.0# [m/s]
         cmd_vel.angular.z = 0.0 # [rad/s]
 
         self.vel_publisher.publish(cmd_vel)  
 
+        
+
         ##check if wall is detected
         ##reason for this on the visualisation of rqt, if the wall is not detected, it always stays on -1, but 
-        # error showing up that ControllerNode' object has no attribute 'rightProximity' don't know why??
         if self.rightProximity != -1.0 or self.leftProximity != -1.0 or self.centerProximity != -1.0 and min(self.rightProximity, self.leftProximity, self.centerProximity) > 2:
             self.get_logger().info('wall detected')
             # Set all velocities to zero
